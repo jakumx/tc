@@ -2,12 +2,18 @@ $(function() {
   var FADE_TIME = 150; // ms
   var TYPING_TIMER_LENGTH = 400; // ms
   var COLORS = [
-    '#e21400', '#91580f', '#f8a700', '#f78b00',
-    '#58dc00', '#287b00', '#a8f07a', '#4ae8c4',
-    '#3b88eb', '#3824aa', '#a700ff', '#d300e7'
+    '#ea2470', '#646e7e'
+    //'#e21400', '#91580f'
+    // , '#f8a700', '#f78b00',
+    // '#58dc00', '#287b00', '#a8f07a', '#4ae8c4',
+    // '#3b88eb', '#3824aa', '#a700ff', '#d300e7'
   ];
 
   // Initialize variables
+  var her = false;
+  var him = false;
+  var nameHer = 'her';
+  var nameHim = 'him';
   var $window = $(window);
   var $usernameInput = $('.usernameInput'); // Input for username
   var $messages = $('.messages'); // Messages area
@@ -84,11 +90,13 @@ $(function() {
       $typingMessages.remove();
     }
 
-    var $usernameDiv = $('<span class="username"/>')
+    var $usernameDiv = $('<span class="username" style="display:none;"/>')
       .text(data.username)
-      .css('color', getUsernameColor(data.username));
+
     var $messageBodyDiv = $('<span class="messageBody">')
-      .text(data.message);
+      .text(data.message)
+      .css('color', data.username == 'her' ? COLORS[0] : COLORS[1]);
+
 
     var typingClass = data.typing ? 'typing' : '';
     var $messageDiv = $('<li class="message"/>')
@@ -144,6 +152,25 @@ $(function() {
     $messages[0].scrollTop = $messages[0].scrollHeight;
   }
 
+  function setHer (flag) {
+    her = flag;
+  }
+  function getHer() {
+    return her;
+  }
+  function setHim (flag) {
+    him = flag;
+  }
+  function getHim () {
+    return him;
+  }
+  function setUsernameHim () {
+    $usernameInput.val(nameHim);
+  }
+  function setUsernameHer() {
+    $usernameInput.val(nameHer);
+  }
+
   // Prevents input from having injected markup
   function cleanInput (input) {
     return $('<div/>').text(input).text();
@@ -189,6 +216,9 @@ $(function() {
   }
 
   // Keyboard events
+  $('#iniciar').on('click', function (e) {
+    socket.emit('exist', $usernameInput.val() );
+  });
 
   $window.keydown(function (event) {
     // Auto-focus the current input when a key is typed
@@ -202,7 +232,7 @@ $(function() {
         socket.emit('stop typing');
         typing = false;
       } else {
-        setUsername();
+        socket.emit('exist', $usernameInput.val() );
       }
     }
   });
@@ -215,6 +245,7 @@ $(function() {
 
   // Focus input when clicking anywhere on login page
   $loginPage.click(function () {
+
     $currentInput.focus();
   });
 
@@ -227,13 +258,21 @@ $(function() {
 
   // Whenever the server emits 'login', log the login message
   socket.on('login', function (data) {
+    // new
+    for (var i = 0; i < data.conversation.length; i++) {
+      addChatMessage(data.conversation[i]);
+    }
+
+    //old
     connected = true;
+    
     // Display the welcome message
-    var message = "Welcome to Socket.IO Chat – ";
-    log(message, {
-      prepend: true
-    });
-    addParticipantsMessage(data);
+
+    //var message = "Welcome to Socket.IO Chat – ";
+    // log(message, {
+    //   prepend: true
+    // });
+    //addParticipantsMessage(data);
   });
 
   // Whenever the server emits 'new message', update the chat body
@@ -243,14 +282,14 @@ $(function() {
 
   // Whenever the server emits 'user joined', log it in the chat body
   socket.on('user joined', function (data) {
-    log(data.username + ' joined');
-    addParticipantsMessage(data);
+    //log(data.username + ' joined');
+    //addParticipantsMessage(data);
   });
 
   // Whenever the server emits 'user left', log it in the chat body
   socket.on('user left', function (data) {
-    log(data.username + ' left');
-    addParticipantsMessage(data);
+    //log(data.username + ' left');
+    //addParticipantsMessage(data);
     removeChatTyping(data);
   });
 
@@ -262,5 +301,21 @@ $(function() {
   // Whenever the server emits 'stop typing', kill the typing message
   socket.on('stop typing', function (data) {
     removeChatTyping(data);
+  });
+
+  socket.on('approved', function (data) {
+    setHer(data.her);
+    setHim(data.him);
+     if (getHer()) {
+          setUsernameHer();
+          setUsername();
+          return;
+        } 
+        if (getHim()) {
+          setUsernameHim();
+          setUsername();
+          return;
+        }
+        $usernameInput.effect('shake');
   });
 });

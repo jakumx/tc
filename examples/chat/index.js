@@ -29,12 +29,19 @@ io.on('connection', function (socket) {
   // when the client emits 'new message', this listens and executes
   socket.on('new message', function (data) {
     // we tell the client to execute 'new message'
-    console.log(objJson);
+    /*console.log(objJson);
     console.log(objJson.push({
       username: socket.username,
       message: data
     }));
-    console.log(objJson);
+    console.log(objJson);*/
+    var jsonChat = JSON.parse(fs.readFileSync('./myjson/chat.json', 'utf8'));
+    jsonChat.push({
+      username: socket.username,
+      message:data
+    });
+
+    fs.writeFileSync('./myjson/chat.json', JSON.stringify(jsonChat), 'utf8');
     socket.broadcast.emit('new message', {
       username: socket.username,
       message: data

@@ -1,1 +1,18 @@
-[{"username":"him","message":"hola hilda :)"},{"message":"hola..."},{"message":"como te llamas?"},{"username":"him","message":"Soy Arturo, como estás?"}]
+[
+  {
+    "username": "him",
+    "message": "hola hilda :)"
+  },
+  {
+  	"username": "her",
+    "message": "hola..."
+  },
+  {
+  	"username": "her",
+    "message": "como te llamas?"
+  },
+  {
+    "username": "him",
+    "message": "Soy Arturo, como estás?"
+  }
+]

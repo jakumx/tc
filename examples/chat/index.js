@@ -41,6 +41,8 @@ io.on('connection', function (socket) {
       message:data
     });
 
+    console.log(jsonChat);
+
     fs.writeFileSync('./myjson/chat.json', JSON.stringify(jsonChat), 'utf8');
     socket.broadcast.emit('new message', {
       username: socket.username,

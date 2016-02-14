@@ -1,1 +1,158 @@
-[{"username":"him","message":"hola hilda :)"},{"username":"her","message":"hola..."},{"username":"her","message":"como te llamas?"},{"username":"him","message":"Soy Arturo, como estás?"},{"username":"her","message":"bien y tu? por que tanto misterio?"},{"username":"him","message":"Bueno, soy un poco tímido"},{"username":"him","message":"Creo que me habría costado más trabajo"},{"username":"him","message":"Poder hablarte sin todo esto"},{"username":"her","message":"dame pistas para ubicarte"},{"username":"him","message":"Hoy traigo una camisa negra"},{"username":"him","message":"Espero no te hayan molestado los detalles"},{"username":"her","message":"supongo que eso era lo que traias ayer "},{"username":"her","message":"y pues no te vi"},{"username":"him","message":"No te preocupes, a ver si me puedes ubicar"},{"username":"him","message":"Hoy traigo una playera negra"},{"username":"her","message":"traias una chamarra negra?"},{"username":"him","message":"si :), ya me ubicaste?"},{"username":"her","message":"creo que si"},{"username":"him","message":"que tal si te invito un cafe ?"},{"username":"her","message":"tu enviaste las flores 💐?"},{"username":"him","message":"Si, espero te hayan gustado 😉"},{"username":"her","message":"oye ero el café tambien me lo vas a enviar?"},{"username":"him","message":"Ese te lo invitaría personalmente"},{"username":"her","message":"bueno entonces espero esa invitación "},{"username":"her","message":"oye..."},{"username":"her","message":"deje las flores y no por que no me gustaran ni por mala onda eh "},{"username":"her","message":"es que tengo capacitacion y andar en el transporte con ellas y luego a mi casa pues como que no "},{"username":"her","message":"mejor que se vea mas bonito mi lugar"},{"username":"him","message":"Si😊 Se ve bonito en tu lugar "},{"username":"him","message":"entonces... nos vemos el sabado?"},{"username":"her","message":"hola"},{"username":"her","message":"tu hiciste las estrellitas?"},{"username":"her","message":"y el sabado no puedo, tengo unos fines de semana muy compilados"},{"username":"her","message":"trabajo en nike y corro sábados y domingos y aparte tengo seminario de titulacion"},{"username":"her","message":"y aparte! no manches el fin de semana la ciudad sera un caos con la llegada del papa jeje"},{"username":"him","message":"Di cuando nos vemos y ahí estaré 😉"},{"username":"him","message":"y si, yo hice las estrellitas "},{"username":"him","message":"O qué tal si me pasas tu número y nos ponemos de acuerdo ? "},{"message":"mm y si mejor me invitas en persona?"}]
+[
+  {
+    "username": "him",
+    "message": "hola hilda :)"
+  },
+  {
+    "username": "her",
+    "message": "hola..."
+  },
+  {
+    "username": "her",
+    "message": "como te llamas?"
+  },
+  {
+    "username": "him",
+    "message": "Soy Arturo, como estás?"
+  },
+  {
+    "username": "her",
+    "message": "bien y tu? por que tanto misterio?"
+  },
+  {
+    "username": "him",
+    "message": "Bueno, soy un poco tímido"
+  },
+  {
+    "username": "him",
+    "message": "Creo que me habría costado más trabajo"
+  },
+  {
+    "username": "him",
+    "message": "Poder hablarte sin todo esto"
+  },
+  {
+    "username": "her",
+    "message": "dame pistas para ubicarte"
+  },
+  {
+    "username": "him",
+    "message": "Hoy traigo una camisa negra"
+  },
+  {
+    "username": "him",
+    "message": "Espero no te hayan molestado los detalles"
+  },
+  {
+    "username": "her",
+    "message": "supongo que eso era lo que traias ayer "
+  },
+  {
+    "username": "her",
+    "message": "y pues no te vi"
+  },
+  {
+    "username": "him",
+    "message": "No te preocupes, a ver si me puedes ubicar"
+  },
+  {
+    "username": "him",
+    "message": "Hoy traigo una playera negra"
+  },
+  {
+    "username": "her",
+    "message": "traias una chamarra negra?"
+  },
+  {
+    "username": "him",
+    "message": "si :), ya me ubicaste?"
+  },
+  {
+    "username": "her",
+    "message": "creo que si"
+  },
+  {
+    "username": "him",
+    "message": "que tal si te invito un cafe ?"
+  },
+  {
+    "username": "her",
+    "message": "tu enviaste las flores 💐?"
+  },
+  {
+    "username": "him",
+    "message": "Si, espero te hayan gustado 😉"
+  },
+  {
+    "username": "her",
+    "message": "oye ero el café tambien me lo vas a enviar?"
+  },
+  {
+    "username": "him",
+    "message": "Ese te lo invitaría personalmente"
+  },
+  {
+    "username": "her",
+    "message": "bueno entonces espero esa invitación "
+  },
+  {
+    "username": "her",
+    "message": "oye..."
+  },
+  {
+    "username": "her",
+    "message": "deje las flores y no por que no me gustaran ni por mala onda eh "
+  },
+  {
+    "username": "her",
+    "message": "es que tengo capacitacion y andar en el transporte con ellas y luego a mi casa pues como que no "
+  },
+  {
+    "username": "her",
+    "message": "mejor que se vea mas bonito mi lugar"
+  },
+  {
+    "username": "him",
+    "message": "Si😊 Se ve bonito en tu lugar "
+  },
+  {
+    "username": "him",
+    "message": "entonces... nos vemos el sabado?"
+  },
+  {
+    "username": "her",
+    "message": "hola"
+  },
+  {
+    "username": "her",
+    "message": "tu hiciste las estrellitas?"
+  },
+  {
+    "username": "her",
+    "message": "y el sabado no puedo, tengo unos fines de semana muy compilados"
+  },
+  {
+    "username": "her",
+    "message": "trabajo en nike y corro sábados y domingos y aparte tengo seminario de titulacion"
+  },
+  {
+    "username": "her",
+    "message": "y aparte! no manches el fin de semana la ciudad sera un caos con la llegada del papa jeje"
+  },
+  {
+    "username": "him",
+    "message": "Di cuando nos vemos y ahí estaré 😉"
+  },
+  {
+    "username": "him",
+    "message": "y si, yo hice las estrellitas "
+  },
+  {
+    "username": "him",
+    "message": "O qué tal si me pasas tu número y nos ponemos de acuerdo ? "
+  },
+  {
+  	"username": "her",
+    "message": "mm y si mejor me invitas en persona?"
+  }
+]
